@@ -17,7 +17,7 @@ pipeline {
                 sh 'pwd' 
             }
         }
-        stage('Test'){
+     //   stage('Test'){
             steps {
                 sh 'java -version'
                 
@@ -28,6 +28,6 @@ pipeline {
                 sh 'ls'
                 sh 'pwd'
             }
-        }
+        }//
     }
 }

@@ -2,8 +2,11 @@
 properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
-    projectUrlStr: 'https://github.com/demo-org-project/test/blob/master/Jenkinsfile'],
-    pipelineTriggers([githubPush()])])
+    projectUrlStr: 'https://github.com/demo-org-project/install'],
+    pipelineTriggers([ upstream(
+      threshold: 'SUCCESS',
+      upstreamProjects: 'https://github.com/demo-org-project/compile'
+    )])])
 
 pipeline {
     agent any 

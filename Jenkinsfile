@@ -2,7 +2,7 @@
 properties([
     [$class: 'GithubProjectProperty',
     displayName: '',
-    projectUrlStr: ''],
+    projectUrlStr: 'https://github.com/demo-org-project/test/blob/master/Jenkinsfile'],
     pipelineTriggers([githubPush()])])
 
 pipeline {
